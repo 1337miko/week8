@@ -177,3 +177,59 @@ ul li::before {
     font-size: 11px;
   }
 }
+
+/* CAROUSEL */
+.carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.carousel-img {
+  width: 320px;
+  height: 220px;
+  object-fit: cover;
+  cursor: pointer;
+  display: block;
+  transition: opacity 0.2s ease;
+}
+
+.carousel-img.fade {
+  opacity: 0;
+}
+
+.carousel-img:hover {
+  opacity: 0.85;
+}
+
+.carousel-hint {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #666;
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #999;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.dot.active {
+  background: #1a1a1a;
+}
+
+@media (max-width: 480px) {
+  .carousel-img {
+    width: 100%;
+    height: 180px;
+  }
+}

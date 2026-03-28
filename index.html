@@ -27,7 +27,6 @@
 
     <section>
       <h2>EXPERIENCE</h2>
-
       <div class="entry">
         <div class="entry-top">
           <div>
@@ -43,7 +42,6 @@
           <li>ENSURING MACHINES WERE WORKING PROPERLY</li>
         </ul>
       </div>
-
       <div class="entry">
         <div class="entry-top">
           <div>
@@ -65,7 +63,16 @@
       <h2>EDUCATION</h2>
       <p>SECONDARY EDUCATION 2008–2010<br/>TALLINNA RIIGIGÜMNAASIUM</p>
       <br/>
-      <p>BSC. MECHANICAL ENGINEERING 2010–2014<br/>TALLINNA TEHNIKAKÕRGKOOL<br/>FINAL YEAR PROJECT: SHAFT ROTOR DESIGN</p>
+      <p>BSC. MECHANICAL ENGINEERING 2010–2014<br/>TALLINNA TEHNIKAKORGKOOL<br/>FINAL YEAR PROJECT: SHAFT ROTOR DESIGN</p>
+    </section>
+
+    <section>
+      <h2>GALLERY</h2>
+      <div class="carousel">
+        <img class="carousel-img" src="images/photo1.jpg" alt="Gallery photo" onclick="nextImage()"/>
+        <p class="carousel-hint">CLICK IMAGE TO BROWSE</p>
+        <div class="carousel-dots" id="carouselDots"></div>
+      </div>
     </section>
 
     <section>
@@ -81,5 +88,49 @@
     </section>
 
   </div>
+
+  <script>
+    // LIST YOUR IMAGE FILES HERE - add or remove as needed
+    const images = [
+      'images/photo1.jpg',
+      'images/photo2.jpg',
+      'images/photo3.jpg'
+    ];
+
+    let current = 0;
+    const imgEl = document.querySelector('.carousel-img');
+    const dotsEl = document.getElementById('carouselDots');
+
+    // Build dots dynamically based on images array
+    images.forEach((_, i) => {
+      const dot = document.createElement('span');
+      dot.classList.add('dot');
+      if (i === 0) dot.classList.add('active');
+      dot.onclick = () => goToImage(i);
+      dotsEl.appendChild(dot);
+    });
+
+    function updateDots() {
+      document.querySelectorAll('.dot').forEach((d, i) => {
+        d.classList.toggle('active', i === current);
+      });
+    }
+
+    function goToImage(index) {
+      current = index;
+      imgEl.classList.add('fade');
+      setTimeout(() => {
+        imgEl.src = images[current];
+        imgEl.classList.remove('fade');
+      }, 200);
+      updateDots();
+    }
+
+    function nextImage() {
+      current = (current + 1) % images.length;
+      goToImage(current);
+    }
+  </script>
+
 </body>
 </html>
