@@ -1,0 +1,67 @@
+{
+  "nimi": "Miko",
+  "perekonnanimi": "Mänd",
+  "vanus": 21,
+  "email": "miko.mattis.mand@tktk.ee",
+  "telefon": "+372 1234 5678",
+  "ametinimetus": "TECHNICIAN",
+  "kokkuvote": "I'VE WORKED AS A TECHNICIAN FOR MOST OF MY LIFE. I HAVE EXPERIENCE IN MANY DIFFERENT FIELDS INCLUDING: DESIGN, MANUFACTURING, CONSULTING ETC. I'VE ALSO MASTERED THE MAJORITY OF 3D MODELLING SOFTWARES. I'M A QUICK LEARNER AND TAKE PRIDE IN EVERY JOB I WORK AT.",
+  "tookogemus": [
+    {
+      "ametikoht": "TECHNICIAN",
+      "ettevote": "COMPANY, TALLINN",
+      "periood": "2023 – 2024",
+      "kirjeldus": "MY MAIN PRIORITY WAS MAKING SURE EVERY MACHINE WAS WORKING WITHOUT INTERRUPTIONS. ALSO DID SOME CAD/CAM WORK TO IMPROVE MANUFACTURING.",
+      "oskused": [
+        "CAD/CAM EXPERIENCE",
+        "IMPROVING MANUFACTURING CAPABILITIES",
+        "ENSURING MACHINES WERE WORKING PROPERLY"
+      ]
+    },
+    {
+      "ametikoht": "TECHNICIAN",
+      "ettevote": "COMPANY, TALLINN",
+      "periood": "2024 – 2026",
+      "kirjeldus": "I WAS MODELLING AND MAKING TECHNICAL DRAWINGS ON A DAILY BASIS. I HAD TO WORK CLOSELY WITH CLIENTS AND PURCHASERS TO ENSURE EVERY DETAIL WAS WORKING AS INTENDED.",
+      "oskused": [
+        "CAD/CAM EXPERIENCE",
+        "PRECISE DETAIL DESIGN",
+        "COMMUNICATION WITH CLIENTS AND PURCHASERS"
+      ]
+    }
+  ],
+  "haridus": [
+    {
+      "kraad": "SECONDARY EDUCATION 2020–2023",
+      "kool": "KOERU KESKKOOL",
+      "lisainfo": null
+    },
+    {
+      "kraad": "BSC. MECHANICAL ENGINEERING 2023–2027",
+      "kool": "TALLINNA TEHNIKAKÕRGKOOL",
+      "lisainfo": "FINAL YEAR PROJECT: SHAFT ROTOR DESIGN"
+    }
+  ],
+  "oskused": [
+    "MICROSOFT EXCEL",
+    "MICROSOFT WORD",
+    "SOLID EDGE",
+    "SOLIDWORKS",
+    "SIEMENS NX",
+    "ANSYS"
+  ],
+  "keeled": [
+    {
+      "keel": "ESTONIAN",
+      "tase": "NATIVE"
+    },
+    {
+      "keel": "ENGLISH",
+      "tase": "B2"
+    },
+    {
+      "keel": "RUSSIAN",
+      "tase": "A2"
+    }
+  ]
+}
