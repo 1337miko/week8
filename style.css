@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #D4D4D4;
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 13px;
+  color: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.page {
+  width: 1440px;
+  min-height: 2810px;
+  background-color: #D4D4D4;
+  padding: 80px 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+header h1 {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 6px;
+}
+
+.subtitle {
+  font-size: 13px;
+  letter-spacing: 4px;
+}
+
+.contact {
+  display: flex;
+  gap: 48px;
+  margin-top: 6px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+/* SECTIONS */
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+h2 {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  border-bottom: 1px solid #1a1a1a;
+  padding-bottom: 6px;
+}
+
+p {
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 1.7;
+}
+
+/* EXPERIENCE ENTRIES */
+.entry {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.entry-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.entry-title {
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.entry-company {
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.entry-date {
+  font-size: 12px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.entry-desc {
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 1.7;
+}
+
+/* LISTS */
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-left: 8px;
+}
+
+ul li {
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 1.7;
+}
+
+ul li::before {
+  content: "· ";
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  body {
+    padding: 30px 0;
+  }
+
+  .page {
+    width: 100%;
+    min-height: unset;
+    padding: 40px 28px;
+    gap: 36px;
+  }
+
+  header h1 {
+    font-size: 22px;
+    letter-spacing: 4px;
+  }
+
+  .subtitle {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .contact {
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+  }
+
+  h2 {
+    font-size: 13px;
+    letter-spacing: 2px;
+  }
+
+  .entry-top {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .entry-date {
+    font-size: 11px;
+  }
+
+  p, .entry-desc, .entry-title, .entry-company, ul li {
+    font-size: 11px;
+  }
+}
