@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title><%= cv.nimi %> <%= cv.perekonnanimi %> – CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+</head>
+<body>
+  <div class="page">
+
+    <header>
+      <h1><%= cv.nimi.toUpperCase() %> <%= cv.perekonnanimi.toUpperCase() %></h1>
+      <p class="subtitle"><%= cv.ametinimetus %></p>
+      <div class="contact">
+        <span><%= cv.telefon %></span>
+        <span><%= cv.email %></span>
+      </div>
+    </header>
+
+    <section>
+      <h2>SUMMARY</h2>
+      <p><%= cv.kokkuvote %></p>
+    </section>
+
+    <section>
+      <h2>EXPERIENCE</h2>
+      <% cv.tookogemus.forEach(function(too) { %>
+        <div class="entry">
+          <div class="entry-top">
+            <div>
+              <p class="entry-title"><%= too.ametikoht %></p>
+              <p class="entry-company"><%= too.ettevote %></p>
+            </div>
+            <p class="entry-date"><%= too.periood %></p>
+          </div>
+          <p class="entry-desc"><%= too.kirjeldus %></p>
+          <ul>
+            <% too.oskused.forEach(function(o) { %>
+              <li><%= o %></li>
+            <% }); %>
+          </ul>
+        </div>
+      <% }); %>
+    </section>
+
+    <section>
+      <h2>EDUCATION</h2>
+      <% cv.haridus.forEach(function(h) { %>
+        <p>
+          <%= h.kraad %><br/>
+          <%= h.kool %>
+          <% if (h.lisainfo) { %><br/><%= h.lisainfo %><% } %>
+        </p>
+        <br/>
+      <% }); %>
+    </section>
+
+    <section>
+      <h2>SKILLS</h2>
+      <ul>
+        <% cv.oskused.forEach(function(o) { %>
+          <li><%= o %></li>
+        <% }); %>
+      </ul>
+    </section>
+
+    <section>
+      <h2>LANGUAGES</h2>
+      <ul>
+        <% cv.keeled.forEach(function(k) { %>
+          <li><%= k.keel %> – <%= k.tase %></li>
+        <% }); %>
+      </ul>
+    </section>
+
+  </div>
+</body>
+</html>
